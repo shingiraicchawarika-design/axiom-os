@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500;600&family=Sora:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --ax-void: #060810; --ax-depth: #0b0f1c; --ax-surface: #0f1526;
+  --ax-raised: #141b30; --ax-card: #18203a; --ax-border: #1e2d4a; --ax-border-light: #253558;
+  --ax-indigo: #6366f1; --ax-indigo-bright: #818cf8; --ax-indigo-dim: #6366f112; --ax-indigo-mid: #6366f130;
+  --ax-emerald: #10b981; --ax-emerald-dim: #10b98115;
+  --ax-amber: #f59e0b; --ax-amber-dim: #f59e0b15;
+  --ax-rose: #f43f5e; --ax-rose-dim: #f43f5e15;
+  --ax-sky: #0ea5e9; --ax-sky-dim: #0ea5e915;
+  --ax-violet: #8b5cf6;
+  --ax-text-primary: #e8edf5; --ax-text-secondary: #7a93b8; --ax-text-muted: #3d5578;
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-ui: 'Sora', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { font-size: 15px; }
+body { margin: 0; background: var(--ax-void); color: var(--ax-text-primary); font-family: var(--font-ui); -webkit-font-smoothing: antialiased; }
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: var(--ax-depth); }
+::-webkit-scrollbar-thumb { background: var(--ax-border); border-radius: 3px; }
+::selection { background: var(--ax-indigo-mid); }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse-dot { 0%,100% { opacity:1; } 50% { opacity:0.4; } }
+@keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+.fade-up { animation: fadeUp 0.35s ease both; }
+.fade-up-1 { animation: fadeUp 0.35s 0.05s ease both; }
+.fade-up-2 { animation: fadeUp 0.35s 0.1s ease both; }
+.fade-up-3 { animation: fadeUp 0.35s 0.15s ease both; }
+.fade-up-4 { animation: fadeUp 0.35s 0.2s ease both; }
+*:focus-visible { outline: 2px solid var(--ax-indigo); outline-offset: 2px; border-radius: 4px; }
