@@ -38,17 +38,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-```
-
-Save the file. Then in PowerShell:
-```
-cd %USERPROFILE%\Downloads\axiom-v2
-git add .
-git commit -m "Fix CORS"
-git push
-
-pipeline = PipelineOrchestrator()
-
 
 # ── Health ─────────────────────────────────────────────────────────────────────
 @app.get("/health")
