@@ -33,11 +33,19 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "https://axiom.lamorahealthcare.co.uk"],
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+```
+
+Save the file. Then in PowerShell:
+```
+cd %USERPROFILE%\Downloads\axiom-v2
+git add .
+git commit -m "Fix CORS"
+git push
 
 pipeline = PipelineOrchestrator()
 
